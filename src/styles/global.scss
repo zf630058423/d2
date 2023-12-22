@@ -1,0 +1,40 @@
+.el-input.is-disabled .el-input__inner {
+    background-color: #F5F7FA;
+    border-color: #E4E7ED;
+    color:#333 !important;
+    cursor: not-allowed;
+    opacity: 1;
+    -webkit-text-fill-color: #333;
+    -webkit-opacity:1
+}
+
+.atooltip {
+    background: #fff !important;
+}
+
+.atooltip.el-tooltip__popper .popper__arrow {
+    /* 上方箭头 */
+    border-top-color: #ccc !important;
+    /* 下方箭头 */
+    border-bottom-color: #ccc !important;
+}
+
+.atooltip.el-tooltip__popper .popper__arrow:after {
+    border-top-color: #fff !important;
+    border-bottom-color: #fff !important;
+}
+
+/* tooltip主体部分 */
+.atooltip.el-tooltip__popper {
+    border-radius: 4px !important;
+    border-color: #e6e6e6 !important;
+    box-shadow: 0px 0px 7px 0px rgba(42, 42, 42, 0.2) !important;
+}
+
+.el-radio__input.is-disabled+span.el-radio__label{
+  color: rgb(51,51,51) !important;
+}
+.el-checkbox__input.is-disabled+span.el-checkbox__label {
+  color: rgb(51,51,51) !important;
+  cursor: not-allowed;
+}

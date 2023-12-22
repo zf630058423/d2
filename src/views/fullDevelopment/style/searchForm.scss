@@ -1,0 +1,62 @@
+.el-form-item__content .el-input-group {
+  vertical-align: middle;
+}
+
+::v-deep .el-form-item__label {
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #56576C;
+}
+
+.el-form-item {
+  width: 100%;
+  margin-bottom: 0px;
+}
+
+::v-deep .el-form-item__content {
+  width: calc(100% - 156px);
+  text-align: left;
+}
+
+::v-deep .el-form--inline .el-form-item__content {
+  width: calc(100% - 156px);
+  text-align: left;
+}
+
+::v-deep .el-select {
+  width: calc(100%);
+}
+
+::v-deep .el-input__icon {
+  height: auto;
+}
+
+::v-deep .el-date-editor .el-range-separator {
+  height: auto;
+}
+
+::v-deep .el-date-editor--datetimerange.el-input,
+.el-date-editor--datetimerange.el-input__inner {
+  width: 100%;
+}
+
+.el-date-editor.el-input,
+.el-date-editor.el-input__inner {
+  width: calc(100%);
+  text-align: left;
+}
+
+::v-deep .el-input__inner {
+  height: 32px;
+  line-height: 32px;
+}
+
+.el-form-item__content .el-input-group {
+  vertical-align: middle;
+}
+
+::v-deep .el-form-item__label {
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #56576C;
+}

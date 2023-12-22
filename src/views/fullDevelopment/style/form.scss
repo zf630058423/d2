@@ -1,0 +1,58 @@
+.label-style {
+  font-weight: 500;
+  color: #0D1126;
+}
+
+::v-deep .el-select {
+  width: 100%;
+}
+
+
+.el-form {
+  width: 100%;
+}
+
+.grid-search-form .search-icon-hide {
+  padding: 3px;
+  position: absolute;
+  left: 0;
+  top: -2px;
+  font-size: 20px;
+  color: #006eff;
+  border-radius: 20%;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.el-form--inline .el-form-item__content {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.grid-search-form label {
+  width: auto;
+}
+
+.col-inine-block {
+  display: flex;
+  justify-content: space-between;
+}
+
+::v-deep.el-table .is_required .cell::after {
+  content: "*";
+  color: #f56c6c;
+  margin-left: 4px;
+}
+
+.del-oper {
+  cursor: pointer;
+  color: #f56c6c;
+}
+
+::v-deep .table-form .el-table__header .el-table__cell {
+  padding: 0;
+}
+
+::v-deep .el-input__icon {
+  line-height: 32px;
+}

@@ -1,0 +1,224 @@
+.el-drawer__header{
+	display:none !important;
+}
+
+.account-drawer-custom-class{
+
+}
+
+.account-head-colose{
+	float:right;
+	z-index: 1;
+	color:#0D1126;
+	 margin-right: 18px;
+	 font-size: 20px
+}
+.account-tabs-bar {
+    /*左右渐变色*/
+    background-image: linear-gradient(270deg,#F2F4F7,#F2F4F7 95%);
+    border-bottom: 0 none;
+    height: 50px;
+    line-height: 50px;
+    z-index: 2;
+    padding-left: 10px;
+}
+.account-tab-item {
+    font-weight: 700;
+    opacity: 1;
+    color:#0D1126;
+    font-size:14px;
+    display: inline-block;
+}
+.account-common {
+    padding: 24px 20px;
+    border-bottom: 1px solid #e1e1e1;
+    line-height: 18px;
+    font-size: 13px;
+    color: #181818;
+    letter-spacing: .16px;
+}
+.account-common-top {
+    position: relative;
+}
+.account-basic {
+    display: flex;
+    width: 100%;
+}
+.account-common-title {
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-family: PingFang SC;
+    font-weight: bold;
+    color: #000000;
+}
+.account-basic-image {
+    width: 45px;
+    height: 45px;
+    margin-right: 12px;
+    border-radius: 22px;
+    cursor: pointer;
+
+}
+.account-switchlogin{
+  color: #0D1126;font-family: PingFang SC;font-size: 12px;font-weight: 500;
+}
+.account-basic-authentication {
+    display: inline-block;
+    padding: 0 8px;
+    font-size: 12px;
+    font-weight: 500px;
+    height: 24px;
+    color: #006EFF;
+    line-height: 24px;
+    background: #EBF1FF;
+    border-radius: 11px;
+}
+.account-basic-name {
+    display: inline-block;
+    color: #0D1126;
+    font-weight: bold;
+    letter-spacing: .27px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 280px;
+    font-size: 16px;
+    font-family: PingFang SC;
+    cursor: pointer;
+}
+.account-basic-name:hover{
+  text-decoration:underline;
+}
+.account-common-box {
+    margin-top: 18px;
+}
+.account-common-left {
+    display: inline-block;
+    font-size: 12px;
+    font-family: PingFang SC;
+    font-weight: 500;
+    color: #666666;
+}
+.account-common-right {
+    display: inline-block;
+    color: #000000;
+    letter-spacing: .31px;
+}
+ 
+.service-login-out {
+    background: #FFFFFF;
+    height: 48px;
+    width:100%;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 48px;
+    border-top: 1px solid #E6E9F0;
+    cursor: pointer;
+    position: absolute;
+    bottom: 0px
+
+}
+.ervice-login-out-button{
+  display: inline-block;
+  width: 92px;
+  height: 32px;
+  margin-top: 9px;
+  line-height: 32px;
+  background: #006EFF;
+  border-radius: 3px;
+  font-size: 12px;
+  font-family: PingFang SC;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+.ervice-login-out-button:hover {
+  background: #268bff;
+}
+.systemTitle {
+    font-size: 20px;
+    display: inline-block;
+    line-height: 52px !important;
+    color: #fff;
+    font-weight: normal;
+    font-style: normal !important;
+}
+
+.admin-layout-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.layout-header-bar{
+    width: 100%; padding: 0;zIndex:1;
+}
+.layout {
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+.el-container{
+    height: 100%;
+}
+
+
+.logo_div {
+    background: #0085E8;
+    border-bottom: 1px solid #363e4f;
+    width: auto;
+    height: 60px;
+    line-height: 60px;
+}
+.admin-layout-container .el-tabs__item{
+    border: 0px !important;
+    color: #333 ;
+    cursor:pointer;
+    font-size: 13px;
+    height: 30px;
+    line-height: 30px;
+}
+.admin-layout-container .el-tabs--card>.el-tabs__header .el-tabs__nav{
+    border: 0px !important;
+}
+.admin-layout-container .el-tabs__item:hover{
+    color: #006EFF ;
+}
+.el-tabs--card>.el-tabs__header{
+    margin: 0 !important;
+}
+.left-menu-nav{
+    overflow-y: auto;
+}
+.left-menu-nav .el-menu{
+    border: 0 !important;
+}
+.el-tab-pane{height: 100% !important;overflow: hidden; padding: 5px}
+
+.ng-breadcrumb{
+    height:36px;line-height: 36px;padding-left: 15px;font-size: 12px;
+}
+
+
+
+
+
+/*tab 样式*/
+div.ivu-tag-primary {
+    background: #808695 !important;
+    border: 0;
+}
+
+div.ivu-tag-default {
+    background: #fff;
+    border: 0;
+}
+
+.ivu-tag-text, .ivu-tag-color-white {
+    /*color: #000000 !important;*/
+}
+/*当前页签*/
+.el-tabs--card>.el-tabs__header .el-tabs__item.is-active{
+    color: #1E9FFF !important;
+    /* border: 0 !important; */
+}

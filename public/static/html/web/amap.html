@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title></title>
+  <script type="text/javascript" src="../../jquery/jquery.min.js"></script>
+  <!-- <script type="text/javascript" src="../../jquery/jquery-migrate.js"></script> -->
+  <script src="http://cache.amap.com/lbs/static/es5.min.js"></script>
+  <script id="amap_src" src=""></script>
+  <!--  <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script> -->
+  <script>
+    window.onLoad = function () {
+      map = new AMap.Map('container');
+    }
+    function _QueryString(Parametername) {
+      var reg = new RegExp('(^|&)' + Parametername + '=([^&]*)(&|$)');
+      var search = window.location.search;
+      if (!search) {
+        var index = window.location.href.indexOf("?");
+        search = window.location.href.substr(index);
+      }
+      var r = search.substr(1).match(reg);
+      if (r != null) return decodeURIComponent(r[2]);
+      return null;
+    }
+    var amapAccessKey = _QueryString("amapAccessKey");
+    var maps_src = "http://webapi.amap.com/maps?v=1.4.15&key=" + amapAccessKey + "&plugin=AMap.Geocoder,AMap.PlaceSearch,AMap.Autocomplete";
+    var jsapi = document.createElement('script');
+    jsapi.charset = 'utf-8';
+    jsapi.src = maps_src;
+    document.head.appendChild(jsapi);
+  </script>
+</head>
+
+<body fit="true" scroll="no">
+  <div class="layui-container" style="width: 100%; margin: 0px; padding: 0px;">
+    <table>
+      <tr  >
+        <td>
+          <div align="left">
+             经度： <input name="lon" id="lon" type="text" class="input-box" step=0.0001 value="" />
+          </div>
+        </td>
+        <td>
+          <div align="left">
+            &nbsp;纬度： <input name="lat" id="lat" class="input-box" type="text" step=0.0001 value="" />
+          </div>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <div align="left">
+             地址： <input name="address" id="address" type="text" class="input-box" style="width:492px;" value="" />
+          </div>
+        </td>
+        <td>&nbsp;<a id="button_search" class="btn btn-sm" role="button" ctr_type="extend_button" style="height: 20px;cursor: pointer;" onclick="searchPosition(this)"> <span class="button-title">搜索</span></a>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div style="padding: 10px;">
+    <div style="width: 100%; height: 500px;" id="container"></div>
+  </div>
+</body>
+
+</html>
+<script type="text/javascript">
+  //参数说明{ "addr": addr, "lon": lon, "lat":lat}
+  var parms = {};
+  function onPageLoad(parms) {
+    if (parms != null) {
+      $('#address').val(parms.addr || "");
+      $('#lat').val(parms.lat || "");
+      $('#lon').val(parms.lon || "");
+    }
+    loadInstMap();
+    if (parms.addr) {
+      setTimeout(function () {
+        $("#button_search").click();
+      }, 1000);
+    }
+  }
+  function getResult() {
+    var lon = $('#lon').val()
+    var lat = $('#lat').val();
+    var address = $('#address').val();
+    var data = [];
+    var item = {
+      "addr": address,
+      //经度
+      "lon": lon,
+      //纬度
+      "lat": lat
+    };
+    data.push(item)
+    return data;
+  }
+</script>
+<script>
+  var map;
+  var lnglat;
+  var geocoder;
+  var marker;
+  var placeSearch = null;
+  var clickHandle = null;
+  var markerClickHandle = null;
+  function loadInstMap() {
+    map = new AMap.Map('container', {
+      zoom: 17,
+      resizeEnable: true
+      //center: [lon, lat],
+    });
+
+    //此插件用来显示当前位置，可在引入API时一同引入
+    map.plugin('AMap.Geolocation', function () {
+      var geolocation = new AMap.Geolocation({
+        enableHighAccuracy: true,
+        timeout: 10000,
+        buttonOffset: new AMap.Pixel(10, 20),
+        zoomToAccuracy: true,
+        buttonPosition: 'RB'
+      });
+      map.center = geolocation;
+      map.addControl(geolocation);//地图控件右下角显示当前位置
+    });
+    //添加初始化标记点
+    if (!marker) {
+      marker = new AMap.Marker();
+      map.add(marker);
+    }
+    //构造地点查询
+    if (!placeSearch) {
+      placeSearch = new AMap.PlaceSearch({
+        map: map
+      });
+    }
+    //点击地图事件
+    map.on('click', function (e) {
+      lnglat = e.lnglat;
+      getPositionInfoByLnglat();
+    })
+
+    //点击标记点事件
+    clickHandle = AMap.event.addListener(marker, 'click', function (e) {
+      lnglat = e.lnglat;
+      getPositionInfoByLnglat();
+    });
+    //点击搜索结果标记点事件
+    markerClickHandle = AMap.event.addListener(placeSearch, "markerClick", function (e) {
+      lnglat = e.data.location;
+      console.log(e.data.location);//当前marker的经纬度信息
+      console.log(e.data.address);//获取当前marker的具体地址信息
+      console.log(e.data);//则是包含所有的marker数据
+      var address = "";
+      if (e.data.address == "") {
+        address = e.data.pname + e.data.cityname + e.data.adname + e.data.name;
+      } else {
+        address = e.data.pname + e.data.cityname + e.data.adname + e.data.address;
+      }
+      $('#address').val(address);
+      $('#lon').val(lnglat.lng);//经纬度
+      $('#lat').val(lnglat.lat);
+    });
+  }
+  //搜索地址
+  var searchFun = function (adcode, keyword) {
+    placeSearch.setCity(adcode);
+    placeSearch.search(keyword, function (status, result) {
+      if (result.poiList.pois[0]) {
+        var first = result.poiList.pois[0];
+        console.log(first.location)
+        //移动标记点
+        marker.setPosition(first.location);
+        map.setCenter(first.location);
+        //经纬度
+        $('#lon').val(marker.getPosition().lng);
+        $('#lat').val(marker.getPosition().lat);
+      } else {
+        FUI.Window.showMsg("请尝试输入更多关键字信息进行搜索！")
+      }
+
+    });
+  }
+
+
+  function getPositionInfoByLnglat() {
+    if (!geocoder) {
+      geocoder = new AMap.Geocoder();
+    }
+    if (!marker) {
+      marker = new AMap.Marker();
+      map.add(marker);
+    }
+    marker.setPosition(lnglat);//设置标记的位置
+    geocoder.getAddress(lnglat, function (status, result) {
+      if (status === 'complete' && result.regeocode) {
+        var address = result.regeocode.formattedAddress;
+        $('#address').val(address);//点击地名称
+        $('#lon').val(lnglat.lng);//经纬度
+        $('#lat').val(lnglat.lat);
+      } else {
+        alert(result);
+      }
+    });
+    marker.setMap(map);//在地图上显示一个标记
+  }
+  function searchPosition() {
+    if ($('#address').val() == "") {
+      FUI.Window.showMsg("请输入搜索地址关键字！")
+      return false;
+    }
+    var address = $('#address').val();
+    searchFun(undefined, address);
+    return false;
+  }
+  function goToPostion() {
+    var lon = $('#lon').val()
+    var lat = $('#lat').val();
+    marker.setPosition([lon, lat])
+  }
+</script>
+<style>
+  .btn {
+    color: #FFF;
+    background-color: #409EFF;
+    border-color: #409EFF;
+    border-radius: 3px;
+  }
+
+  .btn-sm,
+  .btn-group-sm>.btn {
+    border-width: 2px;
+    font-size: 12px;
+    padding: 3px 10px;
+    line-height: 20px;
+    color: #ffffff !important;
+  }
+
+  a.btn-sm {
+    padding: 6px 10px !important;
+  }
+
+  .input-box {
+    -webkit-appearance: none;
+    background-color: #FFF;
+    background-image: none;
+    border-radius: 4px;
+    border: 1px solid #DCDFE6;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #606266;
+    display: inline-block;
+    font-size: inherit;
+    height: 30px;
+    line-height: 30px;
+    outline: 0;
+    padding: 0 15px;
+    -webkit-transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+    transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+  }
+</style>

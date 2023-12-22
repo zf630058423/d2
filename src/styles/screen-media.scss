@@ -1,0 +1,59 @@
+//断点列表
+$breakpoints: (
+  'phone': (320px, 480px),
+  //手机端
+  'pad': (481px, 768px),
+  //pad端
+  'notebook': (769px, 1024px),
+  //笔记本端
+  'desktop': (1025px, 1200px),
+  //PC端
+  'tv': 1201px //TV端
+);
+
+@mixin respond-to($breakname) {
+  $bp: map-get($breakpoints, $breakname);
+
+  @if type-of($bp)=='list' {
+    $min: nth($bp, 1);
+    $max: nth($bp, 2);
+
+    @media (min-width: $min) and (max-width: $max) {
+      @content; //插槽
+    }
+  }
+
+  @else {
+    @media (min-width: $bp) {
+      @content; //插槽
+    }
+  }
+}
+
+//引用例子
+// .header {
+//   display: flex;
+//   width: 100%;
+
+//   @include respond-to('phone') {
+//     height: 50px;
+//     font-size: 12px;
+//   }
+
+//   @include respond-to('pad') {
+//     height: 60px;
+//     font-size: 14px;
+//   }
+
+//   @include respond-to('notebook') {
+//     height: 80px;
+//   }
+
+//   @include respond-to('desktop') {
+//     height: 100px;
+//   }
+
+//   @include respond-to('tv') {
+//     height: 120px;
+//   }
+// }

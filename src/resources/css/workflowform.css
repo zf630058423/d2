@@ -1,0 +1,397 @@
+﻿.el-button+.el-button {
+  margin-left: 1px;
+}
+
+/****************流程状态样式***************/
+.tabbtn {
+  border-radius: 3px;
+  width: 48px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #fff;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.green {
+  background-color: #59b163;
+}
+
+.gray {
+  background-color: #999;
+}
+
+.NoInstance {
+  background-color: #ff797b;
+}
+
+.Draft {
+  background-color: #999;
+}
+
+.Running {
+  background-color: #59b163;
+}
+
+.Completed {
+  background-color: #2EAFEB;
+}
+
+.Suspend {
+  background-color: #000;
+}
+
+.ReturnDraft {
+  background-color: #F4220B;
+}
+
+.ReturnActivity {
+  background-color: #F4220B;
+}
+
+.Canceled {
+  background-color: #999;
+}
+
+.Deleted {
+  background-color: #FBF312;
+}
+
+.wf-rg-tit {
+  border-top: solid 1px #c1c1c1;
+  border-bottom: solid 1px #c1c1c1;
+  height: 36px;
+  line-height: 36px;
+  font-size: 14px;
+  font-weight: bold;
+  padding-left: 15px;
+  background-color: #e7e7e7;
+  background: -webkit-linear-gradient(to bottom, #eee, #e2e2e2);
+  background: -moz-linear-gradient(to bottom, #eee, #e2e2e2);
+  background: -o-linear-gradient(to bottom, #eee, #e2e2e2);
+  background: linear-gradient(to bottom, #eee, #e2e2e2);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#eee, endColorstr=#e2e2e2);
+  /*IE<9>*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient (GradientType=0, startColorstr=#eee, endColorstr=#e2e2e2)";
+  /*IE8+*/
+}
+
+.wf-rg-in {
+  padding: 0 15px;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.wf-box {
+  margin-top: 10px;
+  background-color: #FFFFFF;
+}
+
+.wf-box-in {
+  background-color: #FFFFFF;
+}
+
+.wf-box-section-title {
+  color: #0D1126;
+  font-size: 12px;
+  min-height: 40px;
+  line-height: 40px;
+  border-radius: 3px;
+  font-weight: bold;
+  background-color: #FFFFFF;
+  border-bottom: solid 1px #F7F7FA;
+  /* border-bottom: solid 1px #ededf6; */
+}
+
+.wf-box-section-title .section-title {
+  margin-left: 15px;
+
+}
+
+.wf-box .f2bpmui-datagrid-vuetable,
+.wf-box .el-table--group {
+  border-left: 1px solid #EBEEF5;
+  border-top: 1px solid #EBEEF5;
+}
+
+.wf-box-section-title h2 {
+  float: left;
+  font: 500 14px/32px "Microsoft YaHei";
+  color: #0D1126;
+  text-indent: 10px;
+}
+
+.wf-arrows:hover {
+  background-color: #fff;
+  background-position: -16px 0;
+  border-radius: 3px;
+}
+
+.wf-box-menu a:hover {
+  background-color: #fff;
+}
+
+.wf-box-menu a.icon-min {
+  background-position: 0 0;
+}
+
+.wf-box-menu a.icon-max {
+  background-position: -31px 0;
+}
+
+.wf-box-menu a.icon-close {
+  background-position: -62px 0;
+}
+
+/*ribbon*/
+.wf-ribbon {
+  border-bottom: 1px solid #ebeef5;
+  padding: 7px 10px;
+}
+
+.wf-ribbon span {
+  display: inline-block;
+}
+
+.one-ribbon {
+  padding: 7px 0;
+  border: 0 none;
+}
+
+.pstext {
+  line-height: 30px;
+  margin-left: 5px;
+  color: #999;
+}
+
+/*table*/
+.wf-table table {
+  text-align: center;
+  border-bottom: dotted 1px #ebeef5;
+  color: #666666;
+}
+
+.wf-table-tit {
+  background: #e8e8e8;
+  height: 32px;
+}
+
+.wf-table tr {
+  height: 40px;
+}
+
+.wf-table th {
+  font-weight: normal;
+  text-align: right;
+  color: #333;
+}
+
+.wf-table td {
+  height: 32px;
+  border: 0;
+  color: #333;
+}
+
+
+.publish-root-worklfowform-container {
+  overflow: hidden;
+  background: #F5F6F8;
+}
+
+.wf_buttons_bar {
+  display: block;
+  border-bottom: solid 1px #EBECF0;
+  min-height: 50px;
+  text-align: center;
+  padding-top: 10px;
+  background-color: #FFFFFF;
+}
+
+.workflow-buttonaction-toolbar {
+  margin: 0 auto;
+  text-align: left;
+  max-width: 1500px;
+  min-width: 1000px;
+}
+
+.workflow-buttonaction-toolbar .icon,
+.workflow-buttonaction-toolbar .fa {
+  line-height: 12px;
+  height: 12px;
+}
+
+.workflow-buttonaction-toolbar .button {
+  margin-right: 3px;
+}
+
+.workflow-form-content-detail-container {
+  max-width: 1500px;
+  min-width: 1000px;
+  margin: 0 auto;
+}
+
+.customize_ProcessForm_maintitle {
+  text-align: center;
+  font-size: 28px;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: 000;
+}
+
+.workflow_base_info {
+  padding: 3px;
+}
+
+#WorkflowTitle {
+  width: 600px;
+}
+
+.action_dialog {
+  padding: 0px;
+  display: none;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.action_dialog_button {
+  background-color: #ffffff;
+  width: 98%;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.wf_buttons_bar button {
+  margin-bottom: 3px;
+}
+
+/**************mytree 处理人选择窗口树样式****************/
+.ActivityUserAreaTitle {
+  font-size: 12px !important;
+  height: 24px;
+  line-height: 22px;
+}
+
+.mytree-node {
+  height: 18px;
+  white-space: nowrap;
+  cursor: pointer;
+  display: block;
+}
+
+.mytree-title {
+  font-size: 12px;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: top;
+  white-space: nowrap;
+  padding: 0 2px;
+  height: 18px;
+}
+
+.mytree {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.mytree li {
+  white-space: nowrap;
+  padding-left: 15px;
+}
+
+.mytree li ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.wf-form table {
+  font-size: 12px;
+  background-color: #fff;
+  border: 0px solid #ebeef5;
+  border-bottom-width: 0;
+  border-right-width: 0;
+  width: 100%;
+}
+
+.wf-form th,
+.wf-form td {
+  color: #666666;
+  border-bottom: 0px solid #ebeef5;
+  border-right: 0px solid #ebeef5;
+  height: 30px;
+  padding-left: 5px;
+}
+
+.wf-form th {
+  font-weight: normal;
+  text-align: right;
+}
+
+.wf-pop-tit {
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #F7F7FA;
+  height: 40px;
+  line-height: 36px;
+}
+
+.wf-pop-tit h3 {
+  font-size: 12px;
+  font-weight: bold;
+  color: #666666;
+  display: inline-block;
+}
+
+.wf-pop-tit h3 span {
+  color: #f00;
+}
+
+.wf-pop-in {
+  background-color: #FFFFFF;
+}
+
+.wf-pop-xz {
+  margin: 0 5px 4px 0;
+  padding: 0;
+}
+
+.ActivityListContainer li {
+  height: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 169px;
+}
+
+.ActivityListContainer li input {
+  margin-right: 5px;
+}
+
+.AssistActivityUserAreaTitle {
+  cursor: pointer;
+  height: 25px;
+}
+
+.ActivityUserAreaTitle {
+  cursor: pointer;
+  height: 25px;
+}
+
+.RejectActivityUserAreaTitle {
+  cursor: pointer;
+  height: 25px;
+}
+
+.workflow-form-content-bottom-empty-space {
+  max-width: 1500px;
+  min-width: 1000px;
+  margin: 0 auto;
+}
+
+.workflow-form-content-bottom-empty-space-content {
+  background-color: #FFFFFF;
+}

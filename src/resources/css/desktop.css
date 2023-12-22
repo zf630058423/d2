@@ -1,0 +1,398 @@
+﻿.workdesk-container {
+  overflow: auto;
+  padding: 0 50px;
+  background: #F5F6FA;
+}
+.workdesk-container .el-card__header{
+  border-bottom: 0px;
+  padding: 23px 20px;
+
+}
+.workdesk-container .el-card__body{
+  padding-top:0px;
+  padding-bottom:10px;
+}
+.task-item-box{
+  text-align: center;;
+  cursor: pointer;
+  height: 80px;
+  margin-right: 16px;
+  padding: 5px 20px;
+}
+.workdesk-container .task-item-box:hover{
+  background-color: #f4f6fc;
+  border-radius: 6px;
+
+}
+.workdesk-container  .task-todo .task-todo-wrapper {
+  height: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.workdesk-container .task-todo-image-wrapper{
+  margin-right: 15px;
+  height: 45px;
+  display: inline-block;
+}
+.workdesk-container .task-todo-count{
+  text-align: center;
+  display: inline-block;
+}
+.workdesk-container .task-todo-image{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/lingdan.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.workdesk-container .task-img-box{
+  height: 40px;
+  width: 60px;
+  text-align: center;
+}
+.workdesk-container .task-startflow-image{
+  display: inline-block;
+  margin-top: 10px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  background: url(../images/desktop/startflow.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.workdesk-container .task-mystarted-image{
+  display: inline-block;
+  margin-top: 10px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  background: url(../images/desktop/mystarted.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.workdesk-container .task-done-image{
+  display: inline-block;
+  margin-top: 10px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  background: url(../images/desktop/done.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.workdesk-container .task-circulatedTodo-image{
+  display: inline-block;
+  margin-top: 10px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  background: url(../images/desktop/circulatedTodo.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.workdesk-container .task-circulatedDone-image{
+  display: inline-block;
+  margin-top: 10px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  background: url(../images/desktop/circulatedDone.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.workdesk-container .task-draft-image{
+  display: inline-block;
+  margin-top: 10px;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  background: url(../images/desktop/draft.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+ 
+.workdesk-container .task-todo-name{
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
+  line-height: 32px;
+}
+.workdesk-container .task-todo-number{
+  font-size: 24px;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #0D1126; line-height: 28px;
+}
+ 
+.task-number{
+	font-size: 20px; font-weight: 400; color: rgb(28, 28, 28); line-height: 30px;
+}
+.task-icon{
+  margin-top: 5px;
+  color: #248AF9;
+}
+.task-icon .icon{
+  font-size: 30px;
+}
+.task-name{
+  font-size: 14px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
+}
+
+ 
+
+.bg-color1{
+	background: rgb(249, 178, 102);
+}
+.bg-color2{
+	background: rgb(104, 195, 253);
+} 
+
+.bg-color3{
+
+	background: rgb(117, 171, 244);
+} 
+
+.bg-color4{
+	background: rgb(120, 216, 217);
+} 
+
+.bg-color5{
+	background: #2d8cf0;
+} 
+
+.bg-color6{
+	background: #7eb6da;
+}
+.bg-color7{
+	background: rgb(97, 195, 229);
+}
+
+
+
+
+.h1title {
+	font-size: 16px;
+	font-weight: bold;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.content {
+	padding-left: 3px;
+}
+
+.myboack {
+	display: table;
+	float: left;
+	height: 50px;
+	width: 480px;
+}
+
+.leftBox {
+	display: table;
+	float: left;
+	width: 250px;
+	margin: 5px;
+	margin-left: 20px;
+}
+
+.centerBox {
+	display: table;
+	float: left;
+	width: 580px;
+	margin: 5px;
+}
+
+.rightBox {
+	display: table;
+	float: left;
+	width: 250px;
+	margin: 5px;
+}
+
+.infobox {
+	width: 178px;
+}
+
+.infobox-small {
+	width: 135px;
+}
+
+h4 {
+	font-size: 12pt;
+
+}
+
+#tt > .tabs-panels, .tabs-header {
+	border: 0px;
+}
+
+.row {
+	border-bottom: dashed 1px #ede7e7;
+	height:40px;
+	line-height:40px;  clear:both;
+  color: #333333;
+}
+
+.row:hover {
+	background-color: #FAFBFF;
+  color: #006EFF;
+}
+
+.row > div, .title-row > div, .foot-row > div {
+	float: left;
+	border: 0px;
+	text-align: center;
+	margin-left: 2px;
+	height:40px;
+	line-height:40px;
+	vertical-align:middle;
+}
+
+.title-row {
+	text-align: center;
+	font-weight: bold;
+	border-bottom: solid 1px #ede7e7;
+	height:40px;
+	line-height:40px;
+  font-size: 14px;
+font-family: PingFang SC;
+font-weight: bold;
+color: #000000;
+}
+
+.foot-row {
+	margin-top: 3px;
+	border-top: solid 1px #ede7e7;
+	border-bottom: 0px;
+	font-weight: bold;
+	color: #006EFF;
+	height:22px;
+	line-height:22px;
+}
+
+.rowlink {
+	cursor: pointer;
+}
+
+.listContainer {
+	padding: 3px;
+	padding-left: 2px;
+	padding-right: 2px;
+	border: 0px;
+
+	text-align:center;
+}
+
+.newImg {
+	height: 145px;
+	width: 145px;
+	border: solid 2px #DDDDDD;
+}
+.persion-applicationList{
+  overflow-y: auto;
+  height: 120px; 
+}
+/*应用列表*/
+.persion-applicationList .persion-applicationbox {
+  width: 120px;
+  height: 100px;
+  margin: 8px;
+  border: 0px solid #e3e3e3;
+  cursor: pointer;
+  text-align: center;
+  display:inline-block; 
+  vertical-align:middle;
+  padding-top: 15px;
+}
+.persion-applicationList .persion-applicationboxtitle {
+  padding-top: 10px;
+  padding-bottom: 0;
+  color: #1f2d3d;
+  font-size: 14px;
+}
+.persion-applicationList .persion-applicationbox:hover{
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.05);
+}
+.todoList .el-card__body{
+  padding-top: 0px;
+}
+.todoList  {
+  color: #006EFF;
+}
+.todoList .el-tabs__item{
+  padding-left:14px;
+	font-size: 18px;
+  font-family: PingFang SC;
+font-weight: bold;
+}
+.todoList .el-tabs__active-bar {
+  background-color:#006EFF ;
+  height: 4px;
+}
+.todoList .el-tabs__nav-wrap::after {
+  width: 100%;
+  height: 1px;
+  background-color: #EBEEF5;
+  z-index: 1;
+}
+
+.chart-bar {
+	width:  100%;
+	height: 280px;
+}
+.chart-pie {
+	width: 100%;
+	height: 280px;
+	
+}
+
+.section-title {
+	align-items: center;
+	padding-left: 0px;
+	padding-top: 14px;
+	font-size: 18px;
+  font-family: PingFang SC;
+  font-weight: bold;
+  color: #000000;
+}
+.section-title-subtitle{
+  font-size: 12px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #006EFF;
+  
+}
+
+.prefixBlueBar{
+  display: inline-block;
+  width: 4px;
+  height: 17px;
+  background: #006EFF;
+  position: relative;
+  left: -20px;
+  top:2px
+}
+

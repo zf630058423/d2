@@ -1,0 +1,56 @@
+
+
+/*橙色渐变*/
+.icon-logo-f2 {
+  background-image: -webkit-gradient(linear, right top, left top, from(#ff8f00), color-stop(95%, #ff6a00));
+  background-image: linear-gradient(270deg, #ff8f00, #ff6a00 95%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+/*橙色色BPM*/
+.icon-logo-bpm-cs {
+  background-image: -webkit-gradient(linear, right top, left top, from(#ff8f00), color-stop(95%, #ff6a00));
+  background-image: linear-gradient(270deg, #ff8f00, #ff6a00 95%);
+  background-clip: text;
+  margin-left: 4px;
+  color: transparent;
+}
+
+/*橙色渐变*/
+.icon-logo-f2-blue {
+  background-image: -webkit-gradient(linear, right top, left top, from(#006EFF), color-stop(100%, #006EFF));
+  background-image: linear-gradient(270deg, #006EFF, #006EFF 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+/*橙色色BPM*/
+.icon-logo-bpm-blue {
+  background-image: -webkit-gradient(linear, right top, left top, from(#006EFF), color-stop(100%, #006EFF));
+  background-image: linear-gradient(270deg, #006EFF, #006EFF 100%);
+  background-clip: text;
+  margin-left: 4px;
+  color: transparent;
+}
+
+/*灰色BPM*/
+.icon-logo-bpm {
+  background-clip: text;
+  color: transparent;
+  margin-left: 8px;
+  color: #bdbfc2;
+}
+/*白色BPM*/
+.icon-logo-bpm2 {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: 24px;
+  background-color: #DE2025;
+  border-radius: 5px;
+  color: #fff;
+  /* color: #bdbfc2; */
+}
+ 
+
+ 

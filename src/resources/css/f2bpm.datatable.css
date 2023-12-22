@@ -1,0 +1,57 @@
+/*
+*f2bpm-datatalbe样式
+*广州致博软件科技有限公司版本版权所有
+ */
+.f2bpm-datatable{
+    font-size: 12px;
+    padding: 0;
+    border-top: 1px solid #ebeef5;
+    width: 100%;
+    border-right: 1px solid #ebeef5;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+.f2bpm-datatable th {
+    background: none repeat scroll 0 0 #fafafa;
+    border-bottom: 1px solid #ebeef5;
+    height: 37px;
+    border-left: 1px solid #ebeef5 !important;
+    text-align: center;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.f2bpm-datatable td {
+    border-bottom: 1px solid #ebeef5 !important;;
+    border-collapse: collapse;
+    border-left: 1px solid #ebeef5 !important;;
+    height: 30px;
+    line-height: 30px;
+    min-width: 90px;
+    text-align: center;
+    padding:5px;
+}
+/*分组样式*/
+.f2bpm-datatable .group-head{
+  background-color:#f3f3f3;
+}
+.f2bpm-datatable .group-title{
+  text-align: left;
+  font-weight: bold;
+  padding-left: 5px;
+  cursor: pointer;
+  
+}
+
+
+.noboder-table{
+  border:0 !important;
+}
+.noboder-table td,.noboder-table th{
+  border-bottom:0 !important;
+  border-left:0 !important;
+  border-right: 0 !important;
+  border-bottom: 0 !important;
+  border-top: 0 !important;
+}
+

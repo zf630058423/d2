@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link href="/Workflow/Resources/Css/base.css" rel="stylesheet" />
+    <script src="/Workflow/Resources/JScript/jquery.min.js"></script>
+    <link rel="stylesheet" href="/Workflow/Resources/Bootstrap/css/bootstrap.min.css" />
+
+    <!--bootstrap样式主题-->
+    <link id="bootstrapTheme" rel="stylesheet" href="/Workflow/Resources/Bootstrap/css/bootstrap-blue-theme.css" />
+    <script src="/Workflow/Resources/Bootstrap/js/bootstrap.min.js"></script>
+
+    <!--easyuis样式主题-->
+    <link id="easyuiThemelink" href="/Workflow/Resources/EasyUI/themes/blue/easyui.css" rel="stylesheet" />
+    <link href="/Workflow/Resources/EasyUI/themes/icon.css" rel="stylesheet" />
+
+    <script src="/Workflow/Resources/EasyUI/jquery.easyui.min.js"></script>
+    <script src="/Workflow/Resources/JScript/Validate/validateRules.js"></script>
+    <script src="/Workflow/Resources/JScript/Validate/easyui-validateboxExtend.js"></script>
+
+    <script src="/Workflow/Resources/EasyUI/locale/easyui-lang-zh_CN.js"></script>
+    <link href="/Workflow/Resources/Qtip/jquery.qtip.css" rel="stylesheet" />
+    <script src="/Workflow/Resources/Qtip/jquery.qtip.js"></script>
+    <link href="/Workflow/Resources/Jscript/Plugins/css/FUI.DataGrid.css" rel="stylesheet" />
+    <script src="/Workflow/Resources/Jscript/jquery.operate.js"></script>
+    <script src="/Workflow/Resources/JScript/JSCommon.js"></script>
+    <script src="/Workflow/Resources/JScript/Base/baseContext.js"></script>
+    <script src="/Workflow/Resources/JScript/Plugin/fui.package.js"></script>
+    <script src="/Workflow/Resources/Jscript/Plugin/fui.dialog.js"></script>
+    <script src="/Workflow/Resources/JScript/Form.js"></script>
+
+    <link id="workflowThemelink" href="/Workflow/Resources/Css/blue.css" rel="stylesheet" />
+    <link href="/Workflow/Resources/Css/custom.css" rel="stylesheet" />
+    <link href="/Workflow/Resources/Css/icons.css" rel="stylesheet" />
+    <link href="/Workflow/Resources/Css/appIcons.css" rel="stylesheet" />
+    <link href="/Workflow/Resources/Css/bootstrapEasyui.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/Workflow/Resources/Awesome/css/font-awesome.min.css" />
+
+    <!--[if IE 7]>
+  <link rel="stylesheet" href="/Workflow/Resources/Awesome/css/font-awesome-ie7.css">
+  <![endif]-->
+
+    <script type="text/javascript" src="../../dialogs/internal.js"></script>
+    <script type="text/javascript" src="../common.js"></script>
+    <title></title>
+</head>
+<body>
+    <form>
+        <div id="text_attr" class="panel focus">
+            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="common-FormTable">
+                <tr>
+                    <td>绑定字段:</td>
+                    <td>
+                        <input id="bindfiled" readonly="readonly" name="bindfiled" type="text" class="easyui-validatebox textBoxNoneShort" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>默认值:</td>
+                    <td>
+                        <input id="defaultvalue" name="defaultvalue" type="text" class="easyui-validatebox textBoxShort" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>控件宽度：</td>
+                    <td>
+                        <input type="text" id="width" title="不填写则为默认值" name="width" validtype="number"  max="1000" class="easyui-validatebox textBoxShort" />
+                        <input type="radio" name="widthRadio"   value="0"/>0  <input type="radio" name="widthRadio"   value="50"/>50  <input name="widthRadio" type="radio"  value="80"/>80 <input  name="widthRadio" type="radio"  value="100"/>100  <input  name="widthRadio" type="radio"  value="120"/>120  <input  name="widthRadio" type="radio"  value="150"/>150 <input  name="widthRadio" type="radio"  value="200"/>200
+                    </td>
+                </tr>
+                <tr>
+                    <td>是否必填：</td>
+                    <td>
+                        <select id="required" name="required">
+                            <option value="required">是</option>
+                            <option value="0">否</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
+<script type="text/javascript">
+    var oNode = null
+    var $text = null;
+    var thePlugins = 'formtext';
+    $(function () {
+        $("input[name='widthRadio']").click(function () {
+            $("#width").val($(this).val());
+        });
+
+        if (UE.plugins[thePlugins].editdom) {
+            oNode = UE.plugins[thePlugins].editdom;
+        }
+        if (oNode) {
+            $text = $(oNode);
+            var bindfiled = $text.attr("name");
+            var defaultvalue = $text.attr('defaultvalue');
+            var width = $text.attr('width1') || "0";
+            var required = $text.attr('required') || "0";
+            var data = { bindfiled: bindfiled, defaultvalue: defaultvalue, width: width, required: required };
+            FUI.Form.loadFormData(data);
+        }
+    });
+    dialog.oncancel = function () {
+        if (UE.plugins[thePlugins].editdom) {
+            delete UE.plugins[thePlugins].editdom;
+        }
+    };
+    dialog.onok = function () {
+        if (!FUI.Form.validateForm()) return false;
+        var bindfiled = $("#bindfiled").val();
+        var width = $("#width").val();
+        var defaultvalue = $("#defaultvalue").val();
+        var required = $(":checked[name='required']").val();
+        $text.attr("defaultvalue", defaultvalue);
+        $text.attr("value", defaultvalue);
+        
+        if (width == 0) {
+            $text.removeAttr("width1");
+            $text.removeAttr("style");
+        }
+        else {
+            $text.attr("width1", width);
+            $text.css("width", width + "px");
+        }
+        if (required =="0") {
+            $text.removeAttr("required");
+        }
+        else {
+            $text.attr("required", "required");
+        }
+        var html = $text[0].outerHTML;
+        if (oNode) {
+            $(oNode).after(html);
+            domUtils.remove(oNode, false);
+        }
+        else {
+            editor.execCommand('insertHtml', html);
+        }
+        delete UE.plugins[thePlugins].editdom;
+    }
+
+</script>

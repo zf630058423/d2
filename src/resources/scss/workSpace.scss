@@ -1,0 +1,151 @@
+.workSpace-container {
+  .action-card{
+    background: #FFFFFF;
+    .action-title {
+      color: #303133;
+      font-size: 14px;
+      padding:32px 24px;
+      border-bottom: 1px solid #D9D9D9;
+      span{
+        color: #0052D9;
+        margin-right: 16px;
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    .click-card{
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .card{
+        width: 15%;
+        padding:33px 22px;
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        border:1px solid #DCDCDC;
+        cursor: pointer;
+        img {
+          width: 32px;
+          margin-right: 16px;
+        }
+        .txt{
+          color: #909399;
+          font-size: 14px;
+        }
+        .amount {
+          color: #303133;
+          font-size: 28px;
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+  .workItem-box{
+    display: flex;
+    margin-top: 16px;
+    .workItem {
+      flex: 1;
+      background: #FFFFFF;
+      padding: 24px;
+      padding-bottom: 0;
+    }
+    .header-title{
+      color: #303133;
+      font-size: 20px;
+      margin-bottom: 25px;
+      font-weight: 400;
+      display: flex;
+      justify-content: space-between;
+    }
+    .notice{
+      margin-left: 16px;
+      width: 430px;
+      background: #FFFFFF;
+      padding: 24px;
+      .notice-title{
+        flex: 1;
+        word-wrap: break-word;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        margin-right: 16px;
+        margin-left: 8px;
+      }
+      .notice-list{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 26px;
+        color: #303133;
+        font-size: 14px;
+        cursor: pointer;
+        align-items: center;
+      }
+      .no-data {
+        text-align: center;
+        line-height: 60px;
+        color: #999999;
+        font-size: 14px;
+      }
+    }
+  }
+  ::v-deep .el-calendar{
+    .el-calendar__body{
+    
+      .is-today,.is-selected{
+        background: none !important;
+        color: #202535 !important;
+        margin-top: 4px;
+        .calendar-day{
+          color: #fff;
+          background: #0052D9;
+          width: 50px;
+          font-size: 12px;
+          margin: auto;
+          margin-right: 10px;
+          border-radius: 28px;
+        }
+      }
+
+      
+    }
+    .el-calendar-day:hover{
+      background: none !important;
+      color: #202535 !important;
+      .calendar-day{
+        color: #fff;
+        background: #a0c2fa;
+        width: 50px;
+        font-size: 12px;
+        margin: auto;
+        margin-right: 10px;
+        border-radius: 28px;
+      }
+    }
+    .is-selected:hover{
+      background: #F3F3F3 !important;
+      border-radius: 4px;
+    }
+    .el-calendar__header{
+      padding: 0;
+      border-bottom: 0;
+      .el-calendar__title{
+        font-weight: 600;
+        color: #000;
+        font-size: 20px;
+      }
+    }
+    .el-calendar-table thead th{
+      padding: 12px 17px;
+      color: #000000;
+      font-weight: 400;
+      text-align: right;
+      font-size: 14px;
+    }
+    .el-calendar-table thead th:before{
+      content: '周';
+    }
+  }
+  
+}

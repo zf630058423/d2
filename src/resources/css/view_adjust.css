@@ -1,0 +1,473 @@
+/** ****************** 调用elemenuUI****************/
+.layui-layer-input {
+  outline: none;
+}
+
+.el-button--mini {
+  padding: 7px 8px;
+}
+
+.el-checkbox__label,
+.el-checkbox {
+  font-size: 12px;
+}
+
+.el-form-item__label {
+  font-size: 12px;
+}
+
+/** ****************** 调用elemenuUI****************/
+.el-cascader--small .el-input__icon {
+  width: 10px !important;
+}
+
+.el-cascader .el-input__icon {
+  width: 10px !important;
+}
+
+/*=============== 列表横向滚动条问题，注意行的线要对齐，滚动原则是由两个列表叠加在一起产生的的效果。即左列表+右列表进行层叠加复盖。============== */
+/*左侧Table（不包括标题）的Div高度*/
+.el-table__fixed .el-table__fixed-body-wrapper {
+  height: calc(100% - 38px) !important;
+}
+
+/*左侧Table（包括标题）绝对位置*/
+.el-table .el-table__fixed {
+  height: auto !important;
+  bottom: 10px;
+}
+
+/*==================================================================== */
+
+/* 滚动条的滑块样式 */
+.tableX .el-table .el-table__body-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ccc !important;
+  border-radius: 30px !important;
+}
+
+/* 去除右侧固定定位阴影多出来的像素 */
+.tableX .el-table__fixed-right {
+  /* height: calc(100% - 27px) !important; */
+}
+
+/*解决列对不齐的问题*/
+body .el-table th.gutter {
+  display: table-cell !important;
+}
+
+.f2bpmui-avatar-uploader .el-upload {
+  border: 1px dashed #d9d9d9;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.f2bpmui-avatar-uploader .el-upload:hover {
+  border-color: #006EFF;
+}
+
+.f2bpmui-avatar-uploader .f2bpmui-avatar {
+  width: 180px;
+  height: 180px;
+  display: block;
+}
+
+.f2bpmui-avatar-uploader .avatar-uploader-icon {
+  font-size: 28px;
+  color: #8c939d;
+  width: 180px;
+  height: 180px;
+  line-height: 180px;
+  text-align: center;
+}
+
+.CodeMirror-linenumbers {
+  width: 29px !important;
+}
+
+/* .CodeMirror pre {
+  padding: 0px 30px;
+} */
+/*树形-当前选中的项*/
+/* .is-current{
+  background-color: #006EFF;
+
+} */
+
+/* Treeselect */
+.vue-treeselect {
+  line-height: 32px !important;
+  font-weight: normal !important;
+}
+
+.vue-treeselect__placeholder {
+  line-height: 32px !important;
+}
+
+.vue-treeselect__control {
+  height: 30px !important;
+
+}
+
+.vue-treeselect--has-value .vue-treeselect__multi-value {
+  bottom: 0px !important;
+}
+
+.vue-treeselect__menu-container,
+.vue-treeselect__single-value {
+  color: #606266 !important;
+  font-weight: normal !important;
+  font-size: 12px;
+}
+
+.online-cascader {
+  text-align: left;
+  -webkit-appearance: none;
+  background-color: #FFF;
+  background-image: none;
+  border-radius: 4px;
+  border: 1px solid #DCDFE6;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #606266;
+  display: flex;
+  font-size: inherit;
+  height: 33px;
+  line-height: 33px;
+  outline: 0;
+  padding: 0 0px;
+  -webkit-transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+  transition: border-color .2s cubic-bezier(.645, .045, .355, 1);
+  width: 100%;
+  min-width: 200px;
+}
+
+.el-cascader .el-input {
+  margin: 0px !important;
+  border: 0px !important;
+}
+
+.online-cascader .el-cascader {
+  border: 0px !important;
+  margin: 0px !important;
+  padding: 0px !important;
+}
+
+.online-cascader .el-input__inner {
+  border: 0px !important;
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+.online-cascader .el-input--suffix {
+  border: 0px !important;
+}
+
+.online-cascader .el-input--suffix .el-input__inner {
+  width: 0px;
+}
+
+.online-cascader .el-input--suffix .el-input__suffix-inner {
+  position: relative;
+  left: -8px;
+  top: 1px
+}
+
+.uoloadSty .el-upload--picture-card {
+  width: 110px;
+  height: 110px;
+  line-height: 110px;
+}
+
+.disUoloadSty .el-upload--picture-card {
+  display: none;
+  /* 上传按钮隐藏 */
+}
+
+
+.my-tabtoolbar-el-tabs-hidden-content .el-tabs__content {
+  display: none !important;
+}
+
+.el-input--small {
+  font-size: 12px;
+}
+
+.el-select-dropdown__item {
+  color: #757575;
+  font-size: 12px;
+}
+
+.el-tabs__item {
+  font-size: 12px;
+}
+
+.layui-layer-title {
+  font-size: 12px !important;
+}
+
+.el-table__fixed-right::before,
+.el-table__fixed::before {
+  content: none;
+}
+
+.el-pagination__total {
+  margin-top: 2px;
+}
+
+.el-pagination__sizes .el-input .el-input__inner {
+  font-size: 12px;
+}
+
+.el-pagination .el-select .el-input {
+  margin-top: -2px;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: #006EFF;
+  color: #FFF;
+}
+
+.vue-treeselect__multi-value-item-container {
+  padding-top: 2px !important;
+  padding-bottom: 0px !important;
+}
+
+.vue-treeselect--has-value .vue-treeselect__multi-value {
+  margin-bottom: 0 !important;
+}
+
+.importDialogFrom .el-form-item {
+  margin-bottom: 5px;
+}
+
+/*ElementUi 的列表内容超长时不换行*/
+.el-table .cell {
+  white-space: nowrap;
+}
+
+.el-badge__content {
+  line-height: 16px !important;
+}
+
+.el-table--striped .el-table__body tr.el-table__row--striped.current-row td {
+  background-color: #FAFCFF;
+}
+
+.el-table td,
+.el-table th.is-leaf {
+  border-bottom: 1px solid #EBECF0;
+}
+
+.el-table th.el-table__cell {
+  background: #f7f8fa
+}
+.el-table td.el-table__cell div {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.layui-layer-btn .layui-layer-btn0 {
+  border-color: #006EFF;
+  background-color: #006EFF;
+  color: #fff;
+}
+
+.el-tree--highlight-current .el-tree-node.is-current>.el-tree-node__content {
+  background-color: #F5F6FA;
+}
+
+.el-table--border,
+.el-table--group {
+  border: 0;
+}
+
+.el-tabs__item.is-active {
+  color: #006EFF;
+}
+
+.el-tabs__active-bar {
+  background-color: #006EFF;
+}
+
+/* .el-select {
+  width: 100%;
+} */
+/************************************ElementUI 主要按钮开始**************************************/
+.el-button {
+  line-height: 14px;
+}
+
+.button-color-black .el-button {
+  color: #000000;
+}
+
+.el-button--mini {
+  line-height: 14px;
+}
+
+.el-button--mini {
+  padding: 6px 8px;
+}
+
+/*default*/
+.el-button--default {
+  color: #000000;
+}
+
+.el-button--default.is-plain:hover {
+  color: #268bff;
+  border-color: #268bff;
+}
+
+.el-button--default:focus,
+.el-button--default:hover {
+  color: #268bff;
+  border-color: #268bff;
+  background-color: #FFF;
+}
+
+.el-button--default.is-plain:focus,
+.el-button--default.is-plain:hover {
+  background: #FFF;
+  border-color: #268bff;
+  color: #268bff;
+}
+
+/*primary*/
+.el-button--primary {
+  color: #FFFFFF;
+  background-color: #006EFF;
+  border-color: #006EFF;
+}
+
+.el-button--primary:focus,
+.el-button--primary:hover {
+  background: #268bff;
+  border-color: #268bff;
+  color: #FFFFFF !important;
+}
+
+.el-button--primary.is-plain {
+  color: #006EFF;
+  background: #ecf5ff;
+  border-color: #006EFF;
+}
+
+.el-button--primary.is-plain:hover {
+  background-color: #006EFF;
+  border-color: #056ff9;
+}
+
+
+/*warning*/
+.el-button--warning {
+  background: #FF8205;
+  border-color: #FF8205;
+  color: #FFF;
+}
+
+.el-button--warning:focus,
+.el-button--warning:hover {
+  background: #ff8205d2;
+  border-color: #ff8205d2;
+  color: #FFF;
+}
+
+.el-button--small,
+.el-button--small.is-round {
+  padding: 8px 15px;
+  height: 32px;
+}
+
+.el-button--mini {
+  height: 28px;
+}
+
+.el-button--mini .fa {
+  font-size: 12px;
+}
+
+/************************************ElementUI 主要按钮结束**************************************/
+/*操作列下拉选择按钮*/
+.el-dropdown .el-button {
+  color: #000000;
+}
+
+.el-dropdown-menu__item {
+  color: #000000;
+}
+
+.el-dropdown-menu__item:focus,
+.el-dropdown-menu__item:not(.is-disabled):hover {
+  color: #006EFF;
+  background-color: #EDF2FC;
+}
+
+.el-dropdown .el-button:focus,
+.el-dropdown .el-button:hover {
+  color: #268bff;
+  border-color: #c6e2ff;
+  background-color: #E0EBFF;
+}
+
+.el-radio-button__orig-radio:checked+.el-radio-button__inner {
+  border-color: #006EFF;
+  background-color: #006EFF;
+}
+
+/*调用禁用时的输入框背景色*/
+.el-input.is-disabled .el-input__inner {
+  background-color: #fbfdff;
+  border-color: #eeeff3;
+}
+
+/* 复选框*/
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+  background-color: #006EFF;
+  border-color: #006EFF;
+}
+
+/* 单选框*/
+.el-radio__input.is-checked .el-radio__inner {
+  background-color: #006EFF;
+  border-color: #006EFF;
+}
+
+.el-radio__input.is-checked+.el-radio__label,
+.el-checkbox__input.is-checked+.el-checkbox__label {
+  color: #006EFF;
+}
+
+.el-menu-item.is-active {
+  color: #006EFF;
+}
+
+.el-switch__label {
+  color: #999999;
+}
+
+.el-textarea.is-disabled .el-textarea__inner,
+.vue-treeselect--disabled .vue-treeselect__control {
+  background-color: #fbfdff !important;
+  border-color: #eeeff3;
+  color: #333;
+}
+
+.el-upload-list__item:first-child {
+  margin-top: 0px;
+  padding-right: 45px;
+}
+
+.el-descriptions__header {
+  margin-bottom: 5px;
+}
+
+/*去掉Table的右侧线*/
+.el-table--border .el-table__cell,
+.el-table__body-wrapper .el-table--border.is-scrolling-left~.el-table__fixed {
+  border-right: 0px;
+}

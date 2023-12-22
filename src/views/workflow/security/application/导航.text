@@ -1,0 +1,44 @@
+ <el-menu default-active="2" class="el-menu-vertical-demo">
+            <div v-for="menu in linkTreeData">
+              <!--第一层-->
+              <el-submenu v-if="menu.children" :index="menu.id">
+                <template slot="title">
+                  <i class="el-icon-location"></i>
+                  <span v-html="menu.title"></span>
+                </template>
+                <!--第二层-->
+                <div v-for="_menu in menu.children">
+                  <el-submenu v-if="_menu.children" :index="_menu.id">
+                    <template slot="title">
+                      <i class="el-icon-location"></i>
+                      <span v-html="_menu.title"></span>
+                    </template>
+                    <!--第三层-->
+                    <div v-for="__menu in _menu.children">
+                      <el-submenu v-if="__menu.children" :index="__menu.id">
+                        <template slot="title">
+                          <i class="el-icon-location"></i>
+                          <span v-html="__menu.title"></span>
+                        </template>
+                      </el-submenu>
+                      <el-menu-item v-else :index="__menu.id">
+                        <i class="el-icon-menu"></i>
+                        <span slot="title"><span v-html="__menu.title"></span></span>
+                      </el-menu-item>
+                    </div>
+                    <!--第三层结束-->
+                  </el-submenu>
+                  <el-menu-item v-else :index="_menu.id">
+                    <i class="el-icon-menu"></i>
+                    <span slot="title"><span v-html="_menu.title"></span></span>
+                  </el-menu-item>
+                </div>
+                <!--第二层结束-->
+              </el-submenu>
+              <el-menu-item v-else :index="menu.id">
+                <i class="el-icon-menu"></i>
+                <span slot="title"><span v-html="menu.title"></span></span>
+              </el-menu-item>
+            </div>
+            <!--第一层结束-->
+          </el-menu>

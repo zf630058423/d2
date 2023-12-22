@@ -1,0 +1,97 @@
+/* ===========================FUI全局通用功能性样式======================*/
+/**圆角大方框***/
+.well {
+  width: 180px;
+  display: block;
+  float: left;
+  padding: 14px;
+  margin: 8px;
+  border: 1px solid #e3e3e3;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+/*********************************通用UL LI列表样式*****************/
+.ul-nav {}
+.ul-nav li {
+  border: 0x;
+  display: block;
+  height: 35px;
+  line-height: 35px;
+  color: #000000;
+  vertical-align: middle;
+}
+.ul-nav li {
+  display: block;
+  padding-left: 15px;
+  text-decoration: none;
+  color: #333333;
+  font-size: 12px;
+}
+
+.ul-nav>li:hover {
+  color: #000000;
+  background-color: #F3F5F8;
+  border: 0px;
+}
+
+.ul-nav>li.selected {
+  color: #000000;
+  background-color: #ebf2fc;
+  border: 0px;
+}
+/**************************************************/
+
+/***********************布局***************************/
+/**通用的顶部返回导航条**/
+.f2bpm-layout-header {
+  height: 60px;
+  background: #fff;
+  z-index: 100;
+  font-size: 20px;
+  -webkit-box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 0 8px 0 rgb(0 0 0 / 10%);
+}
+.f2bpm-layout-header .header-left {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+.f2bpm-layout-header .head_title_container {
+  flex: 1;
+  display: flex;
+  line-height: 60px;
+}
+
+.f2bpm-layout-header .home-icon {
+  font-size: 34px;
+  color: #ff6a00;
+}
+
+.f2bpm-layout-header .home-title {
+  font-size: 16px;
+  margin-left: 10px;
+  color: #303133;
+}
+.f2bpm-layout-header .navigation-container {
+  display: inline-block;
+}
+.f2bpm-layout-header .navigation-container .menu-item:hover{
+  color: #ff6a00;
+}
+.f2bpm-layout-header .navigation-container  .is-active{
+  border-bottom: 2px solid #ff6a00 !important;
+  color: #ff6a00 !important;
+}
+/*div 水平流放*/
+div.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}

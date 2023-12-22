@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=0.1, maximum-scale=10, user-scalable=yes"> -->
+  <!-- 是用于设定禁止浏览器从本地机的缓存中调阅页面内容，设定后一旦离开网页就无法从Cache中再调出 注意：这样设定，访问者将无法脱机浏览-->
+  <meta http-equiv="pragram" content="no-cache">
+  <!-- 清除缓存 再访问这个网站-->
+  <meta http-equiv="cache-control" content="no-cache, no-store, must-revalidate">
+  <!-- <meta http-equiv="Expires" content="0"> -->
+  <meta name="viewport"
+    content="width=device-width, user-scalable=yes, initial-scale=0.53, maximum-scale=1.0, minimum-scale=0.53">
+  <link rel="icon" href="<%=BASE_URL %>favicon_zzjs.ico">
+  <link rel="stylesheet" href="<%=BASE_URL %>static/layui/css/modules/layer/default/layer.css">
+  <link rel="stylesheet" href="<%=BASE_URL%>static/awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="<%=BASE_URL%>static/icons/iconfont/iconfont.css">
+  <link rel="stylesheet" type="text/css" href="<%=BASE_URL%>static/icons/iconfont/iconfont2/iconfont.css">
+  <script type="text/javascript" src="<%=BASE_URL %>static/jquery/jquery.min.js"></script>
+
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/f2bpmui.jquery.extend.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/jquery/Sortable.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/jquery/htmlFormatUtil.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/pinYin/jQuery.Hz2Py-min.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/jquery/jquery.form.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/jquery/jSignature.min.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/jquery/beautify.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/layui/lay/modules/layer.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/jquery/xss.js"></script>
+
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/lib/codemirror.css">
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/addon/display/fullscreen.css">
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/theme/panda-syntax.css">
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/theme/solarized.css">
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/theme/paraiso-light.css">
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/theme/3024-day.css">
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/theme/base16-dark.css">
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/theme/base16-light.css">
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/theme/idea.css">
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/theme/ayu-dark.css">
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/theme/ssms.css">
+
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/lib/codemirror.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/mode/javascript/javascript.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/mode/sql/sql.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/edit/matchbrackets.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/comment/continuecomment.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/comment/comment.js"></script>
+
+  <!-- js脚本显示行号和折叠的功能 -->
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/addon/fold/foldgutter.css">
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/fold/foldgutter.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/fold/foldcode.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/fold/brace-fold.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/fold/comment-fold.js"></script>
+
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/addon/hint/show-hint.css">
+  <!-- 样式 -->
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/addon/dialog/dialog.css">
+  <link rel="stylesheet" href="<%=BASE_URL %>static/codemirror/addon/search/matchesonscrollbar.css">
+
+
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/hint/show-hint.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/hint/javascript-hint.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/hint/show-hint.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/hint/anyword-hint.js"></script>
+
+  <!-- 搜索功能 -->
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/scroll/annotatescrollbar.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/search/matchesonscrollbar.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/search/match-highlighter.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/search/jump-to-line.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/dialog/dialog.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/search/searchcursor.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/search/search.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/display/placeholder.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/display/fullscreen.js"></script>
+  <!-- <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/search/advanced-dialog.js"></script> -->
+  <!-- <script type="text/javascript" src="<%=BASE_URL %>static/codemirror/addon/search/revised-search.js"></script> -->
+
+
+
+  <script type="text/javascript" src="<%=BASE_URL %>server-config.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/f2bpmui.base.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/f2bpmui.verification.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/JSCommon.js"></script>
+
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/f2bpmui.dialog.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/f2bpmui.package.js"></script>
+
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/dialogs/customDialog.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/dialogs/selectorDailog.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/dialogs/custSelectorDailog.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/dialogs/wfSelectorDialog.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/dialogs/sysSelectorDialog.js"></script>
+
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/f2bpmui.datatable.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/f2bpmui.datagrid.js"></script>
+
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/onlineForm/FUI.FormElement.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/fgrid/f2grid.permission.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/fgrid/f2grid.js"></script>
+
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/workflow/buttonActin.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/workflow/workflow.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/workflow/workflowfromActor.js"></script>
+
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmDesigner/f2bpm.flowevents.js?v=1"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/graphic/graphic.min.js?v=6"></script>
+
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/onlineForm/f2bpm.form.fieldbase.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/onlineForm/f2bpm.layout.build.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/onlineForm/f2bpm.form.build.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/onlineForm/FUI.SmartForm.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/onlineExcel/exceldesigner.min.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/f2bpmUI/onlineExcel/f2bpm.form.excel.build.js"></script>
+
+  <!-- 自定义 -->
+  <script type="text/javascript" src="<%=BASE_URL %>static/custom/extend.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/custom/dataformat.js"></script>
+  <script type="text/javascript" src="<%=BASE_URL %>static/dingding/ddlogin.js"></script>
+  <script src="<%=BASE_URL %>static/f2bpmUI/f2pmui.data.js"></script>
+
+  <!-- <script src="<%=BASE_URL%>static/vue-i18n/distt/vue-i18n.js"></script> -->
+  <title>
+    <%= webpackConfig.name %>
+  </title>
+  <script>
+    var __serverpath = "";
+    var __websoket = "";
+    if ('<%=process.env.NODE_ENV %>' == 'local') {
+      console.log("本地环境")
+      __serverpath = window.serverConfig.env_local_baseApi;
+      __websoket = window.serverConfig.env_local_websoket;
+    } else if ('<%=process.env.NODE_ENV %>' == 'development') {
+      console.log("开发环境")
+      __serverpath = window.serverConfig.env_dev_baseApi;
+      __websoket = window.serverConfig.env_dev_websoket;
+    } else if ('<%=process.env.NODE_ENV %>' == 'test') {
+      console.log('测试环境');
+      __serverpath = window.serverConfig.env_test_baseApi;
+      __websoket = window.serverConfig.env_test_websoket;
+    } else if ('<%=process.env.NODE_ENV %>' == 'production') {
+      console.log('生产环境');
+      __serverpath = window.serverConfig.env_prd_baseApi;
+      __websoket = window.serverConfig.env_prd_websoket;
+    }
+    var formAction = Object.toQueryString("formAction");
+    var keyId = Object.toQueryString("keyId");
+    var mainTable = Object.toQueryString("mainTable");
+    var parentGridId = Object.toQueryString("parentGridId");
+    var WFContext = {};
+    var richeditorArr = [];
+  </script>
+  <script type="text/javascript" src="<%= BASE_URL %>static/ueditor/ueditor.config.js"></script>
+  <script type="text/javascript" src="<%= BASE_URL %>static/ueditor/ueditor.all.js"></script>
+  <script type="text/javascript" src="<%= BASE_URL %>static/ueditor/lang/zh-cn/zh-cn.js"></script>
+  <script type="text/javascript" src="<%= BASE_URL %>static/ueditor/plugins/plugins.js"></script>
+  <script type="text/javascript" src="<%= BASE_URL %>static/fullcalendar/jquery-ui.min.js"></script>
+  <script type="text/javascript" src="<%= BASE_URL %>static/fullcalendar/fullcalendar.min.js"></script>
+  <script type="text/javascript" src="<%= BASE_URL %>static/echarts/echarts.min.js"></script>
+</head>
+
+<body class="overnone">
+  <noscript>
+    <strong>We're sorry but <%= webpackConfig.name %> doesn't work properly without JavaScript enabled. Please
+        enable it to continue.</strong>
+  </noscript>
+  <div id="app"></div>
+</body>
+
+</html>

@@ -1,0 +1,170 @@
+<template>
+  <div>
+    <el-form ref="formRef" size="small" :rules="formRules" :model="data" class="f2bpm-editform" label-width="120px">
+      <table class="common-FormTable" cellpadding="0" cellspacing="0">
+        <tr>
+          <td id="CommonActorSelectTitle" colspan="2" style="text-align: center; font-size: 16px; font-weight: bold; height: 40px;">追加评论</td>
+        </tr>
+        <tr>
+          <td class="w130 leftTdbg">消息类型： </td>
+          <td>
+            <el-checkbox-group v-model="data.messageType">
+              <!--<el-checkbox label="sms">短信</el-checkbox>-->
+              <el-checkbox label="email">邮件</el-checkbox>
+              <el-checkbox label="qyweixin">企业微信</el-checkbox>
+              <el-checkbox label="syswindow">站内消息</el-checkbox>
+              <el-checkbox label="im">即时通讯</el-checkbox>
+            </el-checkbox-group>
+          </td>
+        </tr>
+        <tr>
+          <td class="leftTdbg">标题：<em>*</em></td>
+          <td class="p5">
+            <el-input id="title" v-model="data.title" size="small" style="width: 75%" />
+          </td>
+        </tr>
+        <tr>
+          <td class="leftTdbg"> 评论内容：<em>*</em></td>
+          <td class="p5" style="line-height:20px"> 
+            <el-input id="content" v-model="data.content" type="textarea" :rows="4" />
+          </td>
+        </tr>
+        <tr>
+          <td class="leftTdbg">通知其他人员：</td>
+          <td class="p5">
+            <el-input v-model="data.notifyOtherUserRealName" size="mini" placeholder="请选择其他人员" readonly="readonly" class="textAutoBoxLong75" />
+            <i class="fa fa-search cur mt5" @click="selectorUserTextValue('notifyOtherUser','notifyOtherUserRealName',null,false,'userId')">选择</i>
+            <a href="javascript:void(0)" class="red" @click="clearSelectedUsers('notifyOtherUser','notifyOtherUserRealName')"><i class="fa fa-minus-circle" />清除</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="leftTdbg">说明：</td>
+          <td><span v-html="helperNode" /></td>
+        </tr>
+      </table>
+      <div class="dialogfooter2">
+        <el-button v-if="formAction!='View'" size="small" type="primary" @click="submitForm()"><i class="fa fa-save" />保存
+        </el-button>
+        <el-button id="btn_cancel" size="small" @click="closeEdit"><i class="fa fa-minus-circle" />取消
+        </el-button>
+      </div>
+    </el-form>
+  </div>
+</template>
+
+<script>
+
+  export default {
+    data() {
+      return {
+        formAction: null,
+        wiids: '',
+        helperNode: '',
+        data: {
+          messageType: [],
+          title: '追加评论',
+          messageTemplate: '',
+          notifyOtherUser: '',
+          notifyOtherUserRealName: ''
+
+        },
+        // stand:表单校验规则
+        formRules: {
+          notifyOtherUserRealName: [
+            { required: true, message: '必填项不能为空' }
+          ],
+          messageType: [
+            { required: true, message: '必填项不能为空' }
+            // {validator: FUI.Validator.onlyBigEnglisthChar},
+          ],
+          messageTemplate: [
+            { required: true, message: '必填项不能为空' }
+          ]
+        }
+      };
+    },
+    created: function () {
+      var that = this;
+      that.language = that.$store.state.app.language;
+      var wiids = Object.toQueryString('wiids');
+      that.wiids = wiids;
+      that.formAction = formAction;
+      that.helperNode = '将会给流程实例当前处理人发送消息，并且同时通知其他人员';
+      that.loadData();
+    },
+    methods: {
+      // ===stand:标准化方法============
+      closeEdit() {
+        // stand:关闭编辑窗口
+        FUI.Window.closeEdit();
+      },
+      // ===stand:标准化方法结束============
+      loadData() {
+        var that = this;
+
+        if (formAction != FUI.FormAction.Add) {
+          FUI.Form.bindDataToForm(that, FUI.Handlers.FuiFrameworkHandler, FUI.Method.AutoGetViewModelMethod, keyId, null, mainTable);
+        }
+      },
+      submitForm() {
+        var that = this;
+        var success = that.validateForm('formRef');
+        if (!success) return;
+        var url = FUI.Handlers.WorkflowBusinessHandler;
+        var msg = '确定要对所选流程实例追加评论吗?';
+        var title = that.data.title;
+        var content = that.data.content;
+        var notifyOtherUser = that.data.notifyOtherUser;
+        var messageType = that.data.messageType;
+        messageType = messageType.toString();
+        if (title == '') {
+          FUI.Window.showMsg('标题不能为空');
+          return false;
+        }
+        if (content == '') {
+          FUI.Window.showMsg('消息内容不能为空');
+          return false;
+        }
+        FUI.Window.confirm(msg, '温馨提示', function (r) {
+          if (r) {
+            var data = {
+              'wiids': that.wiids,
+              'content': content,
+              'messageType': messageType,
+              'title': title,
+              'notifyOtherUser': notifyOtherUser
+            };
+            var result = Object.toAjaxJson(url, 'appendCommentAndNotify', data);
+            FUI.Window.showMsg(result.msg, null, 'info', function () {
+              FUI.Window.refreshParentGrid();
+              FUI.Window.closeEdit();
+            });
+          }
+        });
+      },
+      validateForm(refFormName) {
+        // stand:表单校验
+        var success = false;
+        this.$refs[refFormName].validate(valid => {
+          success = valid;
+        });
+        return success;
+      },
+      selectorUserTextValue(inputKey, inputName, passParm, singleSelect, keyName) {
+        var that = this;
+        WF.SelectorDialog.selectorUserTextValue(that, inputKey, inputName, passParm, singleSelect, keyName);
+      },
+      clearSelectedUsers(inputId, inputName) {
+        var that = this;
+        that.data[inputId] = '';
+        that.data[inputName] = '';
+      },
+      toPinYin(sourceField, targetField) {
+        if (!this.data[targetField]) {
+          const source = this.data[sourceField];
+          this.data[targetField] = Object.toPinYin(source);
+        }
+      }
+    }
+  }
+</script>

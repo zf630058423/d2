@@ -1,0 +1,148 @@
+﻿.f2bpm-excel-sheet  table.f2bpm-sheet-table{ 
+   width: 700px  ;
+   display: table;
+   table-layout:fixed; 
+   background-color: #ffffff; 
+   border-bottom:#f5f2f2 1px solid;
+   border-right:#f5f2f2 1px solid;
+   border-collapse:collapse;
+   empty-cells:show;
+   border-spacing:0;
+   -webkit-user-select:none;
+   -moz-user-select:none;
+   -ms-user-select:none;
+   user-select:none
+  }
+.f2bpm-excel-sheet table.f2bpm-sheet-table tr{line-height:20pt}
+.f2bpm-excel-sheet table.f2bpm-sheet-table td{
+  width:70px;
+  font-size:11pt; 
+  border-top:#f5f2f2 1px solid;
+  border-left:#f5f2f2 1px solid;
+  text-align: center;
+}
+.f2bpm-excel-sheet table.f2bpm-sheet-table td:focus{outline:0;border:1px solid #5897fb;box-shadow:0 0 5px rgba(73,177,249,.5)}
+.f2bpm-excel-sheet table.f2bpm-sheet-table .first-row{line-height:15pt !important}
+
+/*设计时*/
+.f2bpm-sheet-designer table.f2bpm-sheet-table tr td{
+  /*不换行，不撑开*/
+  white-space:nowrap !important; 
+  overflow:hidden  !important;
+  text-overflow: ellipsis !important;
+
+     /*自动换行但不撑开*/
+     /* word-wrap:break-word;
+     word-break:break-all;
+     text-align:center;
+     padding: 2px; */
+}
+/*预览或正式打印时 */
+.f2bpm-sheet-preview table.f2bpm-sheet-table{
+    width:700px;
+    display: table;
+    table-layout:fixed;
+    border-right: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    border-collapse:collapse;
+
+    empty-cells:show;
+    border-spacing:0;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+
+  }
+.f2bpm-sheet-preview table.f2bpm-sheet-table tr{line-height:20pt}
+.f2bpm-sheet-preview table.f2bpm-sheet-table tr td{
+  width:70px;
+  font-size:11pt;
+  border:0; 
+   /*自动换行但不撑开*/
+  word-wrap:break-word;
+  word-break:break-all;
+  text-align:center;
+  padding: 2px;
+}
+.f2bpm-sheet-preview table.f2bpm-sheet-table td:focus{outline:0;border:1px solid #5897fb;box-shadow:0 0 5px rgba(73,177,249,.5)}
+.f2bpm-sheet-preview table.f2bpm-sheet-table .first-row{background: #FFFF;}
+.f2bpm-sheet-preview table.f2bpm-sheet-table  .drug-ele-td{display: none; border:0px !important;background: #FFFF;color: #FFFFFF;}
+
+
+
+
+.my-aside{border-right: 1px solid #e9e9e9;}
+.position-line{
+  border: 0px;
+  border-bottom: #03a9f4 2px solid;
+}
+.cell-chosen-mask-css{background-color:#eaf2f9!important}
+.chosen-area-p,.chosen-area-p div,.col-width-panel,.rightmouse-panel-div,.row-height-panel{position:absolute}
+
+
+.col-width-panel div{position:absolute;width:8px;cursor:e-resize !important;}
+.row-height-panel div{position:absolute;height:8px;cursor:n-resize !important;}
+.drug-ele-td{background-color:#fcfcfc;cursor:pointer;color: #bbb8b8;}
+.drug-ele-td.cell-position-css{background-color:#f8e745}
+.rightmouse-panel-div{border:1px solid #b4b8ba;border-radius:4px;background-color:#fff;z-index:99}
+.rightmouse-panel-div .menu{padding-left:7px;letter-spacing:1px;font-size:14px;line-height:30px;cursor:pointer}
+.rightmouse-panel-div .menu:hover{background-color:#e4e5e1}
+.panel-div-left,.panel-div-right{float:left}
+.panel-div-left{border-right:1px solid #bbd8e5}
+.excel-rightmomuse-icon-css{display:inline-block;width:20px}
+.excel-rightmomuse-icon-next-css{margin-left:33px;color:#795548;font-size:18px}
+.chosen-area-p{background-color:#03a9f4}
+.chosen-area-p-drug{cursor:crosshair}
+.row-hidden{display:none !important}
+
+
+label{font-weight: normal !important;}
+.drap-form-item-excel-virtual .online-form-label{width:99%;font-weight: normal !important;}
+.drap-form-item-excel-virtual .online-form-item{height: 25px;line-height: 20px; min-width: 120px;background: white; border: 2px dotted #f59e05;border-radius:4px;}
+
+
+.common-grid tr td {border-bottom:1px solid #cdcdcd !important;border-left:1px solid #cdcdcd !important;}
+
+.left-sidebar-nav .online-form-item {
+  position: relative;
+  display: inline-block;
+  width: 48%;
+  margin: 1%;
+  padding: 8px 5px;
+  background: #FFFFFF;
+  font-size: 12px;
+  cursor: move;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+ 
+
+}
+.left-sidebar-nav .group-title{
+  line-height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.left-sidebar-nav  ul  {padding-left: 3px;}
+.left-sidebar-nav  li .online-form-item {width:48%;display: inline-block; float: left;}
+
+.left-sidebar-nav .online-form-item:hover {border: 1px dashed #6f3cc4;border-radius: 3px;color:#6f3cc4}
+.left-sidebar-nav .online-form-item .label-title{font-size: 12px !important;}
+.left-sidebar-nav  .component-drag-widget{cursor: move !important;}
+.drag-box-virtual {width:100%; display:inline-block; position:absolute;  opacity: 1;}
+
+
+.onlineexceldesigner-left-subtable-title-block {
+  display: block;
+  clear: both !important;
+  position: relative;
+  width: 98%;
+  margin: 1%;
+  padding: 8px 5px;
+  background: rgb(245, 245, 247);
+  font-size: 12px;
+  border: 1px solid #ccc;
+  font-weight: bold;
+  border-radius: 3px;
+}

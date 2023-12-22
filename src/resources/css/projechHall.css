@@ -1,0 +1,128 @@
+.proiectHall-container {
+  height: 100%;
+  overflow: auto;
+  padding: 0 20px;
+  background: #f3f8ff;
+}
+
+.proiectHall-container .projectItem-menu {
+  /*border: 1px solid;*/
+  margin: 10px 10px 10px 10px;
+  height: auto;
+}
+
+.proiectHall-container .projectItem-menu span {
+  width: 102px;
+  height: 30px;
+  /*border: 1px solid #538EFF;*/
+  opacity: 1;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  line-height: 30px;
+  font-weight: normal;
+  padding: 5px 20px;
+  margin-right: 23px;
+  color: #161616;
+  cursor: pointer;
+
+}
+
+.projectItem-menu-active {
+  border: 1px solid #538eff;
+  border-radius: 4px;
+  /*background: #538eff;*/
+  color: #FFFFFF !important;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  background: linear-gradient(250deg, #0974f1 0%, #538eff 100% );
+  box-shadow: 0 0 5px #5151E5;
+}
+
+.el-card__header{
+  border-bottom: 1px solid #EBEEF5;
+  padding: 15px 20px;
+
+}
+.el-card__body{
+  padding-top:0px;
+  padding-bottom:10px;
+}
+.card-header-title{
+  width: 72px;
+  height: 25px;
+  font-size: 18px;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-weight: 600;
+  line-height: 25px;
+  color: #161616;
+  opacity: 1;
+}
+
+/*项目大厅 样式*/
+.province-data-item {
+  height: 96px;
+  border: 1px solid #f2f6fc;
+  box-shadow: 0 2px 12px 0 #f2f6fc;
+  background: rgba(255,255,255,0.39);
+  /*box-shadow: 0px 3px 10px rgba(82,92,233,0.07);*/
+  opacity: 1;
+  border-radius: 8px;
+  margin: 25px auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.province-data-item .province-data-item-img-1{
+  display: inline-block;
+  width: 94px;
+  height: 94px;
+  text-align: center;
+  background: url(../images/desktop/pNumber.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.province-data-item .province-data-item-img-2{
+  display: inline-block;
+  width: 94px;
+  height: 94px;
+  text-align: center;
+  background: url(../images/desktop/pAmount.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.province-data-item .province-data-item-img-3{
+  display: inline-block;
+  width: 94px;
+  height: 94px;
+  text-align: center;
+  background: url(../images/desktop/sumAmount.png) no-repeat scroll 0px 0px;
+  background-size: cover;
+}
+
+.province-data-item-text-num{
+  font-size: 24px;
+  font-family: DINPro;
+  font-weight: bold;
+  line-height: 29px;
+  color: #333333;
+  opacity: 1;
+}
+.province-data-item-text-label{
+  font-size: 14px;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  font-weight: 400;
+  line-height: 20px;
+  color: #B5B5B5;
+  opacity: 1;
+}
+.el-progress-bar__inner {
+  border-radius: 0;
+}
+.el-progress-bar__outer{
+  border-radius: 0;
+}
+.jindu .el-progress--circle .el-progress__text, .el-progress--dashboard .el-progress__text {
+  color: #FFFFFF;
+}

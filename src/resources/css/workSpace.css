@@ -1,0 +1,715 @@
+﻿.workSpace-container {
+  overflow: auto;
+  padding: 0 20px;
+  background: #f3f8ff;
+}
+
+.workSpace-container .workSpace-left-content {
+  border: 1px solid #f3f8ff;
+  /* min-height: 390px; */
+
+}
+
+.workSpace-container .workSpace-right-content {
+  border: 1px solid #f3f8ff;
+  min-height: 390px;
+}
+
+.workSpace-card {
+  border: 0px solid;
+  width: 100%;
+  height: 100%;
+  /*margin-bottom: 10px;*/
+}
+
+.workSpace-card .el-card__header {
+  border-bottom: 1px solid #EBEEF5;
+  padding: 15px 20px;
+
+}
+
+.workSpace-card .el-card__body {
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
+
+.workSpace-card .card-header-title {
+  width: 72px;
+  height: 25px;
+  font-size: 18px;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  ;
+  font-weight: 600;
+  line-height: 25px;
+  color: #161616;
+  opacity: 1;
+}
+
+.task-item-box {
+  text-align: center;
+  ;
+  cursor: pointer;
+  height: 100%;
+  margin-right: 16px;
+  padding: 5px 20px;
+}
+
+.workSpace-container .task-item-box:hover {
+  background-color: #f4f6fc;
+  border-radius: 6px;
+
+}
+
+.workSpace-container .task-todo .task-todo-wrapper {
+  height: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.workSpace-container .task-todo-image-wrapper {
+  margin-right: 15px;
+  height: 45px;
+  display: inline-block;
+}
+
+.workSpace-container .task-todo-count {
+  text-align: center;
+  display: inline-block;
+}
+
+.workSpace-container .task-img-box {
+  height: 40px;
+  width: 60px;
+  text-align: center;
+}
+
+/* 首页菜单图标显示 第一行*/
+.workSpace-container .task-image-1 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/faqiliucheng.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.workSpace-container .task-image-2 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/daiwoshenpi.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.workSpace-container .task-image-3 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/daiyueliucheng.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.workSpace-container .task-image-4 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/wofaqiliucheng.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.workSpace-container .task-image-5 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/wochulichengcheng.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.workSpace-container .task-image-6 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/yiyueliucheng.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* 首页菜单图标显示 第二行*/
+
+.workSpace-container .task-image-7 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/kehudengji.png) no-repeat scroll 0px 0px;
+  background-size: cover;
+}
+
+.workSpace-container .task-image-8 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/yingxiaolixiang.png) no-repeat scroll 0px 0px;
+  background-size: cover;
+}
+
+.workSpace-container .task-image-9 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/kaibiaojieguo.png) no-repeat scroll 0px 0px;
+  background-size: cover;
+}
+
+.workSpace-container .task-image-10 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/feiyongbaoxiao.png) no-repeat scroll 0px 0px;
+  background-size: cover;
+}
+
+.workSpace-container .task-image-11 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/xitongxinxi.png) no-repeat scroll 0px 0px;
+  background-size: cover;
+}
+
+.workSpace-container .task-image-12 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  background: url(../images/desktop/caogaoxiang.png) no-repeat scroll 0px 0px;
+  background-size: cover;
+}
+
+
+/*公告栏图片*/
+.workSpace-container .announcement-img-title {
+  width: 100%;
+  height: 120px;
+  border: 0px solid;
+  /*background: url(../images/desktop/announcementTitle.png) no-repeat scroll 0px 10px;*/
+  background-color: #FFFFFF;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding: 10px 5px;
+}
+
+.workSpace-container .announcement-item {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #EBEEF5;
+  font-size: 15px;
+  margin: auto;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.workSpace-container .workItem-content {
+  width: 100%;
+  height: auto;
+}
+
+.workSpace-container .workItem-menu {
+  border: 0px solid;
+}
+
+.workSpace-container .workItem-menu span {
+  height: 35px;
+  width: 100px;
+  font-size: 18px;
+  padding: 5px 25px;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  ;
+  font-weight: 600;
+  line-height: 25px;
+  cursor: pointer;
+}
+
+.workItem-menu-active {
+  border: 1px solid #538eff;
+  border-radius: 35px;
+  background: #538eff;
+  color: #FFFFFF;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  ;
+  cursor: pointer;
+}
+
+.workSpace-container .task-todo-name {
+  font-size: 16px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #333333;
+  line-height: 32px;
+}
+
+.workSpace-container .task-todo-number {
+  font-size: 24px;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  ;
+  font-weight: bold;
+  color: #0D1126;
+  line-height: 28px;
+}
+
+.task-number {
+  font-size: 20px;
+  font-weight: 400;
+  color: rgb(28, 28, 28);
+  line-height: 30px;
+}
+
+.task-icon {
+  margin-top: 5px;
+  color: #248AF9;
+}
+
+.task-icon .icon {
+  font-size: 30px;
+}
+
+.task-name {
+  font-size: 14px;
+  font-family: Microsoft YaHei;
+  font-weight: 500;
+  color: #333333;
+  padding: 10px 0px;
+  /*overflow: hidden;*/
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.bg-color1 {
+  background: rgb(249, 178, 102);
+}
+
+.bg-color2 {
+  background: rgb(104, 195, 253);
+}
+
+.bg-color3 {
+
+  background: rgb(117, 171, 244);
+}
+
+.bg-color4 {
+  background: rgb(120, 216, 217);
+}
+
+.bg-color5 {
+  background: #2d8cf0;
+}
+
+.bg-color6 {
+  background: #7eb6da;
+}
+
+.bg-color7 {
+  background: rgb(97, 195, 229);
+}
+
+
+.h1title {
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.content {
+  padding-left: 3px;
+}
+
+.myboack {
+  display: table;
+  float: left;
+  height: 50px;
+  width: 480px;
+}
+
+.leftBox {
+  display: table;
+  float: left;
+  width: 250px;
+  margin: 5px;
+  margin-left: 20px;
+}
+
+.centerBox {
+  display: table;
+  float: left;
+  width: 580px;
+  margin: 5px;
+}
+
+.rightBox {
+  display: table;
+  float: left;
+  width: 250px;
+  margin: 5px;
+}
+
+.infobox {
+  width: 178px;
+}
+
+.infobox-small {
+  width: 135px;
+}
+
+h4 {
+  font-size: 12pt;
+
+}
+
+#tt>.tabs-panels,
+.tabs-header {
+  border: 0px;
+}
+
+.row {
+  border-bottom: dashed 1px #ede7e7;
+  height: 40px;
+  line-height: 40px;
+  clear: both;
+  color: #333333;
+}
+
+.row:hover {
+  background-color: #FAFBFF;
+  color: #006EFF;
+}
+
+.row>div,
+.title-row>div,
+.foot-row>div {
+  float: left;
+  border: 0px;
+  text-align: center;
+  margin-left: 2px;
+  height: 40px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+.title-row {
+  text-align: center;
+  font-weight: bold;
+  border-bottom: solid 1px #ede7e7;
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  ;
+  font-weight: bold;
+  color: #000000;
+}
+
+.foot-row {
+  margin-top: 3px;
+  border-top: solid 1px #ede7e7;
+  border-bottom: 0px;
+  font-weight: bold;
+  color: #006EFF;
+  height: 22px;
+  line-height: 22px;
+}
+
+.rowlink {
+  cursor: pointer;
+}
+
+.listContainer {
+  padding: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border: 0px;
+
+  text-align: center;
+}
+
+.newImg {
+  height: 145px;
+  width: 145px;
+  border: solid 2px #DDDDDD;
+}
+
+.workSpace-persion-applicationList .workSpace-quick-entry {
+  min-width: 143px;
+  height: 100px;
+  border: 0px solid #e3e3e3;
+  cursor: pointer;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+/*应用列表*/
+.workSpace-persion-applicationList .workSpace-persion-applicationbox {
+  min-width: 150px;
+  height: 100px;
+  /*margin: 8px 0 8px 30px;*/
+  border: 0px solid #e3e3e3;
+  cursor: pointer;
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 10px;
+}
+
+.workSpace-persion-applicationList .workSpace-persion-applicationboxtitle {
+  padding-top: 10px;
+  padding-bottom: 0;
+  color: #1f2d3d;
+  font-size: 14px;
+}
+
+
+.workSpace-persion-applicationList .workSpace-quick-entry:hover,
+.workSpace-persion-applicationbox:hover {
+  /*border: 1px solid #e3e3e3;*/
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.05);
+}
+
+.todoList .el-card__body {
+  padding-top: 0px;
+}
+
+.todoList {
+  color: #006EFF;
+}
+
+.todoList .el-tabs__item {
+  padding-left: 14px;
+  font-size: 18px;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.todoList .el-tabs__active-bar {
+  background-color: #006EFF;
+  height: 4px;
+}
+
+.todoList .el-tabs__nav-wrap::after {
+  width: 100%;
+  height: 1px;
+  background-color: #EBEEF5;
+  z-index: 1;
+}
+
+.chart-bar {
+  width: 100%;
+  height: 280px;
+}
+
+.chart-pie {
+  width: 100%;
+  height: 280px;
+}
+
+.section-title {
+  align-items: center;
+  padding-left: 0px;
+  padding-top: 14px;
+  font-size: 18px;
+  font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  ;
+  font-weight: bold;
+  color: #000000;
+}
+
+.section-title-subtitle {
+  font-size: 12px;
+  font-family: Microsoft YaHei;
+  font-weight: 400;
+  color: #006EFF;
+
+}
+
+.prefixBlueBar {
+  display: inline-block;
+  width: 4px;
+  height: 17px;
+  background: #006EFF;
+  position: relative;
+  left: -20px;
+  top: 2px
+}
+
+.dialogClass .el-dialog__body {
+  padding: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color: #606266;
+  font-size: 14px;
+  background: #F3F8FF;
+}
+
+.dialogClass .el-dialog__footer {
+  text-align: right;
+}
+
+.dialogClass .el-dialog__header {
+  padding: 15px;
+  line-height: 15px;
+}
+
+.dialogClass .el-dialog__headerbtn .el-dialog__close {
+  font-size: 20px;
+}
+
+/*日历 自定义样式*/
+.el-calendar-table__row .current .calendar-day {
+  text-align: center;
+  /*color: #202535;*/
+  line-height: 30px;
+  font-size: 14px;
+  font-family: '思源黑体 CN Bold', '思源黑体 CN Regular', '思源黑体 CN';
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+.el-calendar-table__row .prev .calendar-day,
+.el-calendar-table__row .next .calendar-day {
+  text-align: center;
+  /*color: #202535;*/
+  line-height: 30px;
+  font-size: 14px;
+  font-family: '思源黑体 CN Bold', '思源黑体 CN Regular', '思源黑体 CN';
+  font-weight: normal;
+  margin-top: 15px;
+}
+
+/* .el-calendar-table__row .current,.el-calendar-table__row .prev,.el-calendar-table__row .next{
+  height: 100px;
+} */
+​ .is-selected {
+  font-family: '思源黑体 CN Bold', '思源黑体 CN Regular', '思源黑体 CN';
+  font-weight: normal;
+  font-size: 14px;
+  margin-top: 5px;
+  text-decoration: none;
+  /* color: rgb(104, 143, 235); */
+}
+
+.is-selected-select {
+  color: rgb(104, 143, 235);
+}
+
+.is-selected-warn {
+  color: rgb(240, 178, 12);
+}
+
+.is-selected-error {
+  color: rgb(255, 0, 0);
+}
+
+/*.el-calendar-table tr td:first-child {*/
+/*border-left: none;*/
+/*}*/
+
+/*.el-calendar-table tr:first-child td {*/
+/*border-top: none;*/
+/*}*/
+
+.el-calendar-table td {
+  /*border-bottom: none;*/
+  /*border-right: none;*/
+  vertical-align: top;
+  -webkit-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+}
+
+.el-calendar-table .el-calendar-day {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 10px 0 15px 0;
+  height: 110px;
+}
+
+.el-calendar-table td.is-selected {
+  background: #538EFF;
+
+  color: #fff;
+  border-radius: 10px;
+}
+
+.el-calendar-table .current .el-calendar-day:hover {
+  cursor: pointer;
+  background: #538EFF;
+
+  color: #fff;
+  border-radius: 10px;
+}
+
+.el-calendar-table .prev .el-calendar-day:hover,
+.el-calendar-table .next .el-calendar-day:hover {
+  background-color: #fff;
+  -webkit-transition: background-color .2s ease;
+  transition: background-color .2s ease;
+}
+
+.el-calendar-table .current .el-calendar-day:hover .calendar-day,
+.el-calendar-table .current .el-calendar-day:hover .is-selected {
+  color: #fff;
+}
+
+.el-backtop,
+.el-calendar-table td.is-today {
+  color: #FFFFFF;
+  background: #538EFF;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.stepsClass {
+  /*border: 1px solid;*/
+}
+
+.stepsClass .el-step__main .el-step__title {
+  font-size: 12px;
+}
+
+.stepsClass .el-step__head .el-step__icon {
+  height: 20px;
+  width: 20px;
+}

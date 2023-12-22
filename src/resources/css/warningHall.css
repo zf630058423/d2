@@ -1,0 +1,144 @@
+.warningHall-container {
+  overflow: scroll;
+  padding: 0 20px;
+  background: #F3F8FF;
+}
+
+.warningHall-container .projectItem-menu {
+  /*border: 1px solid;*/
+  margin: 28px 10px 20px 10px;
+  height: auto;
+}
+
+.warningHall-container .projectItem-menu span {
+  width: 102px;
+  height: 25px;
+  border: 1px solid #538EFF;
+  opacity: 1;
+  border-radius: 16px;
+  font-size: 18px;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;;
+  line-height: 25px;
+  font-weight: 400;
+  padding: 3.5px 20px;
+  margin-right: 23px;
+  color: #538EFF;
+  cursor: pointer;
+
+}
+
+.projectItem-menu-active {
+  border: 1px solid #538eff;
+  border-radius: 16px;
+  background: #538eff;
+  color: #FFFFFF !important;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;;
+}
+
+.el-card__header{
+  border-bottom: 1px solid #EBEEF5;
+  padding: 23px 20px;
+
+}
+.el-card__body{
+  padding-top:0px;
+  padding-bottom:10px;
+}
+.card-header-title{
+  width: 72px;
+  height: 25px;
+  font-size: 18px;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;;
+  font-weight: 600;
+  line-height: 25px;
+  color: #161616;
+  opacity: 1;
+}
+
+/*预警大厅 样式*/
+.warningHall-province-data-item {
+  /*height: 60px;*/
+  /*border: 1px solid;*/
+  /*background: rgba(255,255,255,0.39);*/
+  /*box-shadow: 0px 3px 10px rgba(82,92,233,0.07);*/
+  opacity: 1;
+  border-radius: 8px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px;
+}
+.warningHall-province-data-item .warningHall-province-data-item-img-1{
+  display: inline-block;
+  width: 94px;
+  height: 94px;
+  text-align: center;
+  background: url(../images/desktop/pNumber.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.warningHall-province-data-item .warningHall-province-data-item-img-2{
+  display: inline-block;
+  width: 94px;
+  height: 94px;
+  text-align: center;
+  background: url(../images/desktop/pAmount.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.warningHall-province-data-item .warningHall-province-data-item-img-3{
+  display: inline-block;
+  width: 94px;
+  height: 94px;
+  text-align: center;
+  background: url(../images/desktop/sumAmount.png) no-repeat scroll 0px 0px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.warningHall-province-data-item-text-num{
+  height: 20px;
+  font-size: 20px;
+  font-family: DINPro;
+  font-weight: bold;
+  line-height: 29px;
+  color: #333333;
+  opacity: 1;
+}
+.warningHall-province-data-item-text-label{
+  height: 17px;
+  font-size: 12px;
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;;
+  font-weight: 400;
+  line-height: 17px;
+  color: #FF665F;
+  opacity: 1;
+  margin-top: 15px;
+}
+
+/*公告栏图片*/
+ .warningHall-announcement-list{
+   padding: 10px;
+ }
+ .announcement-img-title{
+  width: 100%;
+  height: 130px;
+  border: 0px solid;
+  background: url(../images/desktop/announcementTitle.png) no-repeat scroll 0px 10px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+ .announcement-item{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #EBEEF5;
+  font-size: 15px;
+  margin: auto;
+  line-height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
